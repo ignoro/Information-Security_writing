@@ -86,3 +86,4 @@ Virtual Address Space 사용, 물리적 메모리보다 더 큰용량 제공
 연속할당 : 고정분할, 가변 분할
 
 # U
+http://captech.tistory.com/6 / https://kkomii22.tistory.com/138#google_vignette
