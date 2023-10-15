@@ -1,3 +1,4 @@
+http://captech.tistory.com/6 / https://kkomii22.tistory.com/138#google_vignette
 # CPU
 ## CPU의 정의
 입력장치로부터 자료를 받아 연산 후 결과를 출력 장치로 전송하는 과정을 제어하는 핵심 장치 (연산, 레지스터, 제어, 버스), 기억 장치 (레지스터, 캐시, 주기억 장치, 보조기억 장치)
@@ -93,4 +94,45 @@ Virtual Address Space 사용, 물리적 메모리보다 더 큰용량 제공
   - DMA : 메모리와 주변장치를 직접 관리, 속도 빠름 (Cycle Stealing: CPU 사용하지 않는 버스 점유, Brust Mode: 점유)
   - 채널 I/O (I/O Processor) : I/O장치의 복잡함으로 DMA 한계를 보완하여 별도 전용 처리기능 프로세서 탑재
       1. Multipleer : 저속장치, 시분할 방식
-http://captech.tistory.com/6 / https://kkomii22.tistory.com/138#google_vignette
+      2. Selector : 고속장치, 단일 입출력
+   
+# 운영체제
+## 운영체제의 정의
+컴퓨터 시스템의 자원들을 효율적으로 관리, 사용자의 컴퓨터 편의성 환경 제공
+
+## 운영체제의 목적
+1. 처리능력 향상
+2. 신뢰성 항상
+3. 응답시간의 단축
+4. 자원 활용률 향상
+5. 가용성 향상
+
+## 운용체제 주요 자원 관리 기능
+1. 프로세스 관리
+2. 기억장치 관리
+3. 주변장치 관리
+4. 파일 관리
+
+# CPU 스케줄링 기법 (프로세스 상태 전이)
+컴퓨터의 자원을 효율적으로 사용하기 위한 정책, 자원을 요청하는 프로세스 순서를 정함
+## 점유방식
+1. 선점(Preemptive) : 프로세스 CPU 점유 시 다른 프로세서 점유 가능 (Round-robin, SRT)
+    1. Round-robin : 각 프로세스는 같은 시간을 CPU에서 할당
+    2. SRT(Shortest Remaining Time) : 수행시간이 짧은 작업부터 CPU를 할당하지만 수행중 다른 프로세스가 더 짧은시간 일때 점유 가능
+2. 비선점(Non-preemtive) : 프로세스 CPU 점유 시 독점(FCFS, SJF, HRN)
+    1. FCFS(First Come First Service) : 대기큐에 도착한 순서에 따라 CPU할당
+    2. SJF(Short Job First) : 수행시간이 짧은 작업부터 CPU 할당
+    3. HRN(Highest Ratio Next) : SJF를 개선하여 프로세스 우선순위로 할당
+  
+Multi Level Queue : 여러 종류의 그룹(큐)로 나누어 각자 독자적인 스케쥴링 기법을 사용
+Multi Level Feedback Queue : 그룹(큐)들을 라운드로빈 + 비선점방식(Hybrid 스케쥴링)
+
+병행성제어
+
+상호 배제(Mutual Exclustion Techniques) : 다수의 프로세스 동일 자원 접근 시 무결성 보장, 임계영역 사용
+1. 임계영역
+
+
+
+
+
