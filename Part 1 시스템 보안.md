@@ -85,5 +85,12 @@ Virtual Address Space 사용, 물리적 메모리보다 더 큰용량 제공
 
 연속할당 : 고정분할, 가변 분할
 
-# U
+# I/O 인터페이스 (주기억장치, 보조기억장치 입출력)
+1. CPU 경유 : 프로그램에 의한 I/O, 인터럽트에 의한 I/O
+  - 프로그램에 의한 I/O : CPU가 주변 장치를 연속 감시하는 Polling 방식
+  - 인터럽트에 의한 I/O : 인터럽트 요청 감지시 수행작업을 중시
+2. CPU 비경유 : DMA(Direct Memory Access Controller), Channel I/O
+  - DMA : 메모리와 주변장치를 직접 관리, 속도 빠름 (Cycle Stealing: CPU 사용하지 않는 버스 점유, Brust Mode: 점유)
+  - 채널 I/O (I/O Processor) : I/O장치의 복잡함으로 DMA 한계를 보완하여 별도 전용 처리기능 프로세서 탑재
+      1. Multipleer : 저속장치, 시분할 방식
 http://captech.tistory.com/6 / https://kkomii22.tistory.com/138#google_vignette
